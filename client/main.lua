@@ -9,12 +9,12 @@ local function deleteAll(resourceName)
         return
     end
 
-    for k, v in pairs(spawnedhen) do  -- Itt is tyúkra cserélve
+    for k, v in pairs(spawnedhen) do 
         DeletePed(v)
         count = count + 1
     end
 
-    return -- print(('Delete Hens'):format(count))  -- Szöveg frissítése
+    return -- print(('Delete Hens'):format(count)) 
 end
 
 ---@param hash number
@@ -85,7 +85,7 @@ local function setCooldown(playerId, henId)
 end
 
 
----Spawn hen (tyúk)
+---Spawn hen 
 local function spawnhen()
     
     for i = 1, #Hen, 1 do
