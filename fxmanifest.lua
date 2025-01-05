@@ -3,7 +3,7 @@ lua54        'yes'
 game         'gta5'
 
 name         'azakit_heneggcollecting'
-version      '1.0.0'
+version      '1.1.0'
 author       'Azakit'
 description  'Collecting eggs from hens'
 
@@ -20,7 +20,15 @@ server_scripts {
     'server/*'
 }
 
+
 shared_scripts {
     '@ox_lib/init.lua',
 	'@es_extended/imports.lua',
+    --'@qb-core/shared/items.lua', 
+}
+
+dependencies {
+    'es_extended',
+    'mysql-async',
+    --'qb-core'
 }
