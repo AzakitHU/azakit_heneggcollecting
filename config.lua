@@ -1,9 +1,11 @@
 LANGUAGE = 'en'
 
+FrameworkType = "ESX" -- or "QBCore" (and fxmanifest.lua)
 EGG = "egg" -- reward
 MINEGG = 1 -- minimum egg / hen
 MAXEGG = 2 -- maximum egg / hen
 COOLDOWN = 300.0 -- sec / hen / player 300.0 = 5 minutes
+InteractionType = "ox_target" -- Options: "ox_target" or "qb-target"
 
 Hen = {
     {
@@ -28,5 +30,9 @@ Check = {
     EnableSkillCheck = true, -- OX_LIB Skill Check.
     ProcessTime = 5, -- second - Only used when EnableSkillCheck is false.
 }
+
+-- Skill Check Configuration
+SkillCheckDifficulty = {'easy', 'easy'}  -- Difficulty levels for skill checks (e.g., 'easy', 'medium', 'hard').
+SkillCheckKeys = {'w', 'a', 's', 'd'}  -- Keys that must be pressed during the skill check.
 
 Webhook = ""
