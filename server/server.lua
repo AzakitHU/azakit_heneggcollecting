@@ -31,12 +31,11 @@ end)
 
 RegisterServerCallback("azakit_heneggcollecting:exchangeProcess", function(source, cb, index)
     local src = source
-    local framework = FrameworkType:lower()
 
     local xPlayer
-    if framework == "ESX" then
+    if FrameworkType == "ESX" then
         xPlayer = ESX.GetPlayerFromId(src)
-    elseif framework == "QBCore" then
+    elseif FrameworkType == "QBCore" then
         xPlayer = QBCore.Functions.GetPlayer(src)
     else
         print("[HenEggCollecting] Invalid FrameworkType in config: " .. FrameworkType)
@@ -46,9 +45,9 @@ RegisterServerCallback("azakit_heneggcollecting:exchangeProcess", function(sourc
 
     local randomEggCount = math.random(MINEGG, MAXEGG)
 
-    if framework == "ESX" then
+    if FrameworkType == "ESX" then
         xPlayer.addInventoryItem(EGG, randomEggCount)
-    elseif framework == "QBCore" then
+    elseif FrameworkType == "QBCore" then
         xPlayer.Functions.AddItem(EGG, randomEggCount)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[EGG], "add", randomEggCount)
     end
