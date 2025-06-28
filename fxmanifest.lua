@@ -14,7 +14,6 @@ client_scripts {
 }
 
 server_scripts {
-	"@oxmysql/lib/MySQL.lua",
 	"locales/*",
 	'config.lua',
     'server/*'
@@ -23,12 +22,4 @@ server_scripts {
 
 shared_scripts {
     '@ox_lib/init.lua',
-	'@es_extended/imports.lua',
-    --'@qb-core/shared/items.lua', 
-}
-
-dependencies {
-    'es_extended',
-    'mysql-async',
-    --'qb-core'
 }
