@@ -1,6 +1,6 @@
 LANGUAGE = 'en'
 
-FrameworkType = "ESX" -- or "QBCore" (and fxmanifest.lua)
+FrameworkType = "ESX" -- or "QBCore" 
 EGG = "egg" -- reward
 MINEGG = 1 -- minimum egg / hen
 MAXEGG = 2 -- maximum egg / hen
